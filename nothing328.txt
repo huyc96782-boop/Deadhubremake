@@ -1615,12 +1615,6 @@ end
 -- =============================================
 local fovCircle = Drawing.new("Circle")
 fovCircle.Thickness = 2; fovCircle.Transparency = 0.2; fovCircle.Visible = false; fovCircle.Radius = 150; fovCircle.Color = Color3.new(0,1,0); fovCircle.Filled = false; fovCircle.Position = Camera.ViewportSize / 2
-local function updateFOVDisplay(isFirstPerson)
-    local center = Camera.ViewportSize / 2
-    local offsetY = isFirstPerson and 0 or -100
-
-    fovCircle.Position = center + Vector2.new(0, offsetY)
-end
 
 -- =============================================
 -- 📈 RENDER STEP (MAIN LOOP – ESP CORRIGIDO)
